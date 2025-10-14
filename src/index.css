@@ -2,77 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+  50% {
+    transform: translateY(-20px) translateX(10px);
   }
 }
 
-@keyframes slideLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-120px);
-  }
+.floating-circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-@keyframes revealRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.3);
+  animation: float 8s ease-in-out infinite;
 }
 
-@keyframes fadeDown {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(100px);
-  }
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+  animation-duration: 10s;
 }
 
-@keyframes mainFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
 }
 
-.animate-fade-in {
-  animation: fadeIn 1.5s ease-out forwards;
+.circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  right: 10%;
+  animation-delay: 1s;
+  animation-duration: 11s;
 }
 
-.animate-slide-left {
-  animation: slideLeft 0.6s ease-out forwards;
-}
-
-.animate-reveal-right {
-  animation: revealRight 0.6s ease-out forwards;
-  animation-delay: 0.1s;
-  opacity: 0;
-}
-
-.animate-fade-down {
-  animation: fadeDown 0.7s ease-in forwards;
-}
-
-.animate-main-fade-in {
-  animation: mainFadeIn 1s ease-out forwards;
+.circle-4 {
+  width: 120px;
+  height: 120px;
+  bottom: 10%;
+  right: 5%;
+  animation-delay: 3s;
+  animation-duration: 9s;
 }
