@@ -2,7 +2,7 @@ import { Key, MessageCircle } from 'lucide-react';
 
 function App() {
   return (
-    <div className="min-h-screen bg-purple-600 flex items-center justify-center p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-purple-700 flex items-center justify-center p-8 relative overflow-hidden">
       <div className="floating-circles">
         <div className="circle circle-1"></div>
         <div className="circle circle-2"></div>
@@ -16,7 +16,7 @@ function App() {
             <img
               src="/raw-removebg-preview.png"
               alt="Alter Logo"
-              className="w-24 h-24 object-contain"
+              className="w-32 h-32 object-contain"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 const fallback = document.createElement('div');
@@ -33,13 +33,13 @@ function App() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-          <button className="group relative px-8 py-4 bg-white hover:bg-gray-50 text-purple-600 rounded-xl font-semibold text-lg transition-all duration-200 flex items-center gap-3 min-w-[200px] justify-center">
-            <Key className="w-5 h-5" />
+          <button className="group relative px-8 py-4 bg-white hover:bg-gray-50 text-purple-700 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 min-w-[200px] justify-center hover:scale-105 hover:shadow-2xl">
+            <Key className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             <span>Get Script</span>
           </button>
 
-          <button className="group relative px-8 py-4 bg-transparent hover:bg-white/10 text-white rounded-xl font-semibold text-lg transition-all duration-200 flex items-center gap-3 min-w-[200px] justify-center border-2 border-white/30">
-            <MessageCircle className="w-5 h-5" />
+          <button className="group relative px-8 py-4 bg-transparent hover:bg-white/10 text-white rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 min-w-[200px] justify-center border-2 border-white/30 hover:scale-105 hover:border-white/50">
+            <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             <span>Discord</span>
           </button>
         </div>
