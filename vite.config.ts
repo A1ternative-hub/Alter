@@ -7,4 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  base: '/Alter/', // 👈 This line is crucial for GitHub Pages
 });
